@@ -20,16 +20,20 @@ Make sure you have the following installed on your system:
 - **Docker**
 - **Docker Compose**
 
+---
+
 ### Installation
 
-1. Clone the repository (Optional):
+1. **Clone the repository** (Optional, if you haven't already):
 
 ```bash
 git clone git@github.com:KhilanSurapaneni/blockhouse-assessment.git
 cd blockhouse-assessment
 ```
 
-2. Ensure the project structure is as follows:
+2. **Verify the project structure**:
+
+Ensure your project directory looks like this:
 
 ```
 root
@@ -38,33 +42,66 @@ root
 │   ├── Dockerfile
 │   ├── manage.py
 │   ├── requirements.txt
-│   └── <other Django files>
+│   └── (other Django backend files)
 │
 ├── frontend
 │   ├── Dockerfile
 │   ├── package.json
-│   └── <other Next.js files>
+│   └── (other Next.js frontend files)
 │
 └── docker-compose.yml
 ```
 
 ### Running the Application
 
-1. Build and run the application using Docker Compose:
+1. **Build and start the application with Docker Compose**:
+
+Run the following command to build and start both the frontend and backend services:
 
 ```bash
 docker-compose up -d --build
 ```
 
-2. After the build completes, the services will be available at the following URLs:
+2. **Access the services**:
+
+After the build process completes, you can access the services at:
    - **Frontend (Next.js)**: `http://localhost:3000`
    - **Backend (Django API)**: `http://localhost:8000`
 
-To stop the application, press `Ctrl + C` or run the following command to stop and remove the containers:
+3. **Shut down the application**:
+
+To stop the running containers, use `Ctrl + C` or run the following command:
 
 ```bash
 docker-compose down
 ```
+
+---
+
+3. **Manual Run Option** (if Docker is unavailable):
+
+You can also run the application manually by using the following commands:
+
+- **Backend (Django)**:
+  In one terminal window, from the root directory:
+
+  ```bash
+  cd backend/
+  python3 -m venv .venv
+  source .venv/bin/activate
+  pip install -r requirements.txt
+  python manage.py makemigrations && python manage.py migrate
+  python manage.py runserver
+  ```
+
+- **Frontend (Next.js)**:
+  In another terminal window, from the root directory:
+
+  ```bash
+  cd frontend/
+  npm install
+  npm run dev
+  ```
 
 ---
 
