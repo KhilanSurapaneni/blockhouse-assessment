@@ -1,0 +1,54 @@
+# Python/Django specific ignores
+*.pyc
+__pycache__/
+db.sqlite3
+*.sqlite3
+*.log
+*.pot
+*.py[cod]
+*.so
+*.pyd
+
+# Django migrations (keep init files)
+**/migrations/*
+!**/migrations/__init__.py
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# Local virtual environments
+.venv/
+venv/
+env/
+
+# Docker-related
+*.log
+docker-compose.override.yml
+
+# Node.js specific ignores
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.next/
+out/
+
+# Typescript specific ignores
+*.tsbuildinfo
+
+# Production build outputs
+dist/
+build/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE specific
+.vscode/
+.idea/
+*.swp
+*.swo
