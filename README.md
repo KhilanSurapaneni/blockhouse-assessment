@@ -25,8 +25,8 @@ Make sure you have the following installed on your system:
 1. Clone the repository (Optional):
 
 ```bash
-git clone 
-cd blockhouse-test
+git clone git@github.com:KhilanSurapaneni/blockhouse-assessment.git
+cd blockhouse-assessment
 ```
 
 2. Ensure the project structure is as follows:
